@@ -14,4 +14,4 @@ Fichiers:
 - images/                     -> photos fournies par le client
 
 ce site n'est aucunement le site officiel de la mairie d'abengourou.
-l'interface est developper par la structure de communication CODE INDUSTRIE
+l'interface est developper par la structure de communication CODE
