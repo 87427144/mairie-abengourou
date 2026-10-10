@@ -87,7 +87,7 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 </div></header>
 
 <section class="page-hero"><div class="container"><div class="eyebrow" style="color:#ffd28e">INVESTIR</div><h1>ABENGOUROU, VILLE D’OPPORTUNITÉS</h1><p>Un territoire où l’agriculture, les services, le commerce, l’agro-industrie et le tourisme peuvent soutenir de nouvelles chaînes de valeur.</p></div></section>
-<section class="section"><div class="container split reveal"><img src="images/abengourou_vue_aerienne.jpeg" alt="Vue aérienne d’Abengourou"><div><div class="eyebrow">Pourquoi Abengourou ?</div><h2>Un bassin économique à valoriser.</h2><p>Abengourou est présentée par le portail économique ivoirien comme un connecteur économique secondaire, avec une économie notamment basée sur le cacao, le café, l’hévéa, l’industrie du bois et l’anacarde. La région dispose également d’un potentiel touristique et agro-industriel.</p><p style="margin-top:12px">L’objectif de cette page est de transformer ces atouts en informations pratiques pour les investisseurs : foncier, secteurs, partenaires, projets, contacts et procédures.</p></div></div></section>
+<section class="section"><div class="container split reveal"><img src="images/branding 22 BON ok ok ok~1.jpg" alt="Vue aérienne d’Abengourou"><div><div class="eyebrow">Pourquoi Abengourou ?</div><h2>Un bassin économique à valoriser.</h2><p>Abengourou est présentée par le portail économique ivoirien comme un connecteur économique secondaire, avec une économie notamment basée sur le cacao, le café, l’hévéa, l’industrie du bois et l’anacarde. La région dispose également d’un potentiel touristique et agro-industriel.</p><p style="margin-top:12px">L’objectif de cette page est de transformer ces atouts en informations pratiques pour les investisseurs : foncier, secteurs, partenaires, projets, contacts et procédures.</p></div></div></section>
 <section class="section alt"><div class="container"><div class="section-head"><div><div class="eyebrow">Secteurs</div><h2>Des filières à fort potentiel.</h2></div></div><div class="grid grid-3">
 <div class="card reveal"><div class="card-body"><h3>🌱 Agriculture</h3><p>Cacao, café, hévéa, cultures vivrières et chaînes de valeur agricoles.</p></div></div>
 <div class="card reveal"><div class="card-body"><h3>🏭 Agro-industrie</h3><p>Transformation, conditionnement, stockage, logistique et valorisation locale des productions.</p></div></div>
@@ -96,7 +96,7 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 <div class="card reveal"><div class="card-body"><h3>🌿 Tourisme</h3><p>Tourisme culturel, patrimonial, agrotourisme et écotourisme.</p></div></div>
 <div class="card reveal"><div class="card-body"><h3>⚡ Énergies & services</h3><p>Énergie, numérique, services professionnels, maintenance et solutions urbaines.</p></div></div>
 </div></div></section>
-<section class="section"><div class="container form"><div class="section-head"><div><div class="eyebrow">Opportunités</div><h2>Présenter un projet à la commune.</h2><p class="lead">Utilisez ce formulaire comme interface de démonstration. Il devra être connecté au service compétent avant mise en production.</p></div></div>
+<section class="section"><div class="container form"><div class="section-head"><div><div class="eyebrow">Opportunités</div><h2>Présenter un projet à la commune.</h2><p class="lead">Utilisez ce formulaire.</p></div></div>
 <form data-demo><div class="form-grid"><div class="field"><label>Nom / Responsable</label><input required></div><div class="field"><label>Organisation</label><input required></div><div class="field"><label>Email</label><input type="email" required></div><div class="field"><label>Téléphone</label><input required></div><div class="field"><label>Secteur</label><select><option>Agriculture</option><option>Agro-industrie</option><option>Immobilier</option><option>Commerce</option><option>Tourisme</option><option>Industrie</option><option>Services</option><option>Énergies</option></select></div><div class="field"><label>Objet</label><input></div><div class="field full"><label>Présentation du projet</label><textarea required></textarea></div></div><div class="actions"><button class="btn btn-primary" type="submit">Envoyer la demande</button><button class="btn btn-outline" type="button" id="downloadGuide">Télécharger le guide de l’investisseur</button></div><p class="form-status" style="margin-top:12px;font-weight:800"></p></form></div></section>
 
 <div class="lightbox"><button class="close-lightbox" aria-label="Fermer">×</button><img src="" alt="Aperçu"></div>
@@ -107,7 +107,7 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 <div><div class="footer-title">Attractivité</div><div class="footer-links"><a href="investir.html">Investir</a><a href="culture-tourisme.html">Culture & tourisme</a><a href="partenariat.html">Partenariat</a></div></div>
 <div><div class="footer-title">Contact</div><div class="footer-links"><span>Hôtel de Ville, Abengourou, Côte d’Ivoire</span><span>+225 07 05 70 90 99</span><span>abengouroumairie@gmail.com</span></div></div>
 </div>
-<div class="copyright"><span>© <span data-year></span> Commune d’Abengourou. Tous droits réservés.</span><span>Portail institutionnel — contenu à valider par la mairie avant publication.</span></div>
+<div class="copyright"><span>© <span data-year></span> Commune d’Abengourou. Tous droits réservés.</span><span>Portail institutionnel.</span></div>
 </div></footer>
 
 <script>
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     e.preventDefault();const out=form.querySelector('.form-status');if(out){out.textContent='Merci. Ce formulaire est prêt à être relié à l’API ou à l’e-mail officiel de la mairie.';out.style.color='#0d6b45'}form.reset();
   }));
   const year=document.querySelector('[data-year]');if(year)year.textContent=new Date().getFullYear();
-  const guide=document.querySelector('#downloadGuide');guide?.addEventListener('click',()=>alert('Ajoutez le fichier PDF officiel « Guide de l’investisseur » dans le dossier du site puis reliez ce bouton à ce fichier.'));
+  const guide=document.querySelector('#downloadGuide');guide?.addEventListener('click',()=>alert('Oupss! « Guide de l’investisseur » pas disponible. Veuillez renseigné le formulaire.'));
 });
 </script>
 </body></html>
