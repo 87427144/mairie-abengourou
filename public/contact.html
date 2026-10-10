@@ -1,0 +1,153 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Commune d’Abengourou</title><meta name="description" content="Portail institutionnel de la Commune d’Abengourou — ABENGOUROU, VILLE D’OPPORTUNITÉS.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0d6b45;--green2:#15915e;--orange:#e87918;--ochre:#c68a2a;
+  --blue:#1167a8;--navy:#0c2740;--cream:#f6f8f5;--white:#fff;--text:#183028;
+  --muted:#61736c;--border:#dce7e1;--shadow:0 18px 45px rgba(9,48,35,.12);
+  --radius:22px;--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--text);line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(92%,var(--max));margin:auto}
+.topbar{background:var(--navy);color:#fff;font-size:.82rem;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900}
+.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#fff;font-weight:900;font-size:1.35rem;box-shadow:0 8px 20px rgba(13,107,69,.22)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:.68rem;letter-spacing:.08em}
+.brand strong{display:block;color:var(--navy);font-size:1rem}
+.navlinks{display:flex;align-items:center;gap:4px}
+.navlinks a{padding:11px 10px;border-radius:10px;font-size:.84rem;font-weight:800;color:#33463f;transition:.2s}
+.navlinks a:hover,.navlinks a.active{background:#eaf5ef;color:var(--green)}
+.navlinks .cta{background:var(--orange);color:#fff;padding:12px 16px}
+.navlinks .cta:hover{background:#cf6410;color:#fff}
+.menu{display:none;background:none;border:0;font-size:1.7rem;color:var(--navy)}
+.hero{min-height:74vh;display:grid;align-items:center;background:linear-gradient(90deg,rgba(5,35,25,.82),rgba(5,35,25,.30)),url("images/abengourou_vue_aerienne.jpeg") center/cover}
+.hero .container{padding:90px 0}
+.kicker{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);color:#fff;padding:8px 13px;border-radius:999px;font-weight:800;font-size:.8rem}
+.hero h1{color:#fff;font-size:clamp(2.6rem,6vw,5.8rem);line-height:1.02;max-width:900px;margin:20px 0}
+.hero h1 span{color:#ffd28e}
+.hero p{color:#edf8f2;max-width:760px;font-size:1.08rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 18px;font-weight:900;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--orange);color:#fff}.btn-primary:hover{transform:translateY(-2px);filter:brightness(.96)}
+.btn-secondary{background:#fff;color:var(--navy)}.btn-outline{background:transparent;color:var(--green);border:1px solid var(--green)}
+.section{padding:86px 0}
+.section.alt{background:#fff}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}
+.eyebrow{color:var(--orange);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;color:var(--navy);margin-top:8px}
+.lead{color:var(--muted);max-width:760px}
+.grid{display:grid;gap:22px}
+.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 25px rgba(10,50,35,.06)}
+.card-body{padding:24px}.card h3{color:var(--navy);margin-bottom:8px}.card p{color:var(--muted)}
+.media{aspect-ratio:16/10;overflow:hidden;background:#dfe9e4}.media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.card:hover .media img{transform:scale(1.04)}
+.badge{display:inline-block;padding:6px 9px;border-radius:999px;background:#eaf5ef;color:var(--green);font-size:.72rem;font-weight:900}
+.hero-card{background:#fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.split img{border-radius:26px;box-shadow:var(--shadow);width:100%;height:100%;max-height:600px;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.stat{padding:22px;border-radius:18px;background:#fff;border:1px solid var(--border);text-align:center}
+.stat strong{display:block;font-size:2rem;color:var(--green);line-height:1.1}
+.stat span{font-size:.82rem;color:var(--muted);font-weight:700}
+.note{font-size:.78rem;color:#7b8b85;margin-top:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.filter{border:1px solid var(--border);background:#fff;padding:9px 13px;border-radius:999px;font-weight:800;cursor:pointer}.filter.active{background:var(--green);color:#fff;border-color:var(--green)}
+.meta{font-size:.78rem;color:var(--muted);font-weight:800;margin:8px 0}
+.iconbox{width:48px;height:48px;border-radius:14px;background:#eaf5ef;color:var(--green);display:grid;place-items:center;margin-bottom:18px}
+.list{display:grid;gap:12px}.list li{list-style:none;padding:12px 0;border-bottom:1px solid var(--border)}
+.list li:last-child{border:0}
+.form{background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;color:var(--navy);font-size:.88rem}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:11px;font:inherit;outline:none;background:#fff}.field textarea{min-height:150px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(13,107,69,.1)}
+.timeline{border-left:3px solid #d7e8df;margin-left:12px;padding-left:25px}.timeline article{position:relative;margin-bottom:26px}.timeline article:before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px #fff}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery figure{aspect-ratio:1.25;overflow:hidden;border-radius:16px;cursor:pointer;position:relative}.gallery img{width:100%;height:100%;object-fit:cover;transition:.4s}.gallery figure:hover img{transform:scale(1.06)}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:100;display:none;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:86vh;border-radius:10px}.close-lightbox{position:absolute;top:20px;right:25px;color:#fff;background:none;border:0;font-size:2.3rem;cursor:pointer}
+.map{min-height:380px;border:0;width:100%;border-radius:24px;box-shadow:var(--shadow)}
+footer{background:#092619;color:#dcebe4;padding:55px 0 20px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}.footer-title{font-weight:900;color:#fff;margin-bottom:13px}.footer-links{display:grid;gap:8px;color:#bcd0c7;font-size:.9rem}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:18px;font-size:.78rem;color:#9eb5aa;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.show{opacity:1;transform:none}
+.page-hero{padding:80px 0;background:linear-gradient(110deg,#073b28,#0f6b49);color:#fff}.page-hero h1{font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.05}.page-hero p{max-width:800px;margin-top:15px;color:#dcefe6}
+.notice{padding:15px 18px;border-left:4px solid var(--orange);background:#fff8ef;border-radius:10px;color:#5c4a35}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}th,td{padding:14px;border-bottom:1px solid var(--border);text-align:left}th{background:#edf6f1;color:var(--navy)}
+@media(max-width:1050px){.navlinks{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;border-bottom:1px solid var(--border);padding:12px 4%;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu{display:block}.stats{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.topbar .container{display:none}.nav{min-height:68px}.logo{width:42px;height:42px}.split,.grid-2,.grid-3,.grid-4,.form-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr 1fr}.section{padding:62px 0}.hero{min-height:72vh}.hero .container{padding:70px 0}.footer-grid{grid-template-columns:1fr}.page-hero{padding:60px 0}}
+@media(min-width:1800px){body{font-size:18px}.container{width:min(90%,1500px)}.hero{min-height:78vh}.section{padding:110px 0}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style></head><body>
+<div class="topbar"><div class="container"><span>COMMUNE D’ABENGOUROU • INDÉNIÉ-DJUABLIN • CÔTE D’IVOIRE</span><span>ABENGOUROU, VILLE D’OPPORTUNITÉS</span></div></div>
+<header><div class="container nav">
+<a class="brand" href="index.html"><span class="logo">A</span><span><small>COMMUNE</small><strong>ABENGOUROU</strong></span></a>
+<nav class="navlinks"><a class="" href="index.html">ACCUEIL</a><a class="" href="la-ville.html">LA VILLE</a><a class="" href="actions.html">NOS ACTIONS</a><a class="" href="projets.html">NOS PROJETS</a><a class="" href="investir.html">INVESTIR</a><a class="" href="culture-tourisme.html">CULTURE & TOURISME</a><a class="" href="actualites.html">ACTUALITÉS</a><a class="active" href="contact.html">CONTACT</a><a class="cta" href="partenariat.html">PARTENARIAT</a></nav>
+<button class="menu" aria-label="Ouvrir le menu">☰</button>
+</div></header>
+
+<section class="page-hero"><div class="container"><div class="eyebrow" style="color:#ffd28e">CONTACT</div><h1>La mairie à votre écoute.</h1><p>Informations, démarches, signalements, partenariats et demandes institutionnelles.</p></div></section>
+<section class="section"><div class="container grid grid-2">
+<div class="form reveal"><div class="eyebrow">Coordonnées</div><h2>Hôtel de Ville</h2><ul class="list" style="margin-top:20px"><li><strong>Adresse</strong><br>Hôtel de Ville, Abengourou, Côte d’Ivoire</li><li><strong>Téléphone</strong><br>+225 07 05 70 90 99</li><li><strong>Email</strong><br>abengouroumairie@gmail.com</li><li><strong>Site officiel</strong><br>mairieabengourou.ci</li><li><strong>Horaires</strong><br>08H - 18H.</li></ul></div>
+<div class="reveal"><iframe class="map" src="https://www.google.com/maps?q=Mairie%20d%27Abengourou%2C%20C%C3%B4te%20d%27Ivoire&output=embed" loading="lazy" title="Carte de la mairie d’Abengourou"></iframe></div>
+</div></section>
+<section class="section alt"><div class="container form"><div class="section-head"><div><div class="eyebrow">Écrire à la mairie</div><h2>Votre demande.</h2><p class="lead">Formulaire connecter à la messagerie officielle.</p></div></div>
+<form action="https://formsubmit.co/abengouroumairie@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nouvelle demande de contact — Commune d’Abengourou">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://mairie-abengourou.pages.dev/merci.html">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_url" value="https://mairie-abengourou.pages.dev/contact.html">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div class="form-grid"><div class="field"><label for="nom">Nom complet</label><input id="nom" name="nom" required autocomplete="name"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div><div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" autocomplete="tel"></div><div class="field"><label for="objet">Objet</label><select id="objet" name="objet"><option>Information</option><option>Démarche administrative</option><option>Signalement</option><option>Partenariat</option><option>Investissement</option><option>Autre</option></select></div><div class="field full"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div></div><button class="btn btn-primary" type="submit">Envoyer le message</button><p style="margin-top:12px;font-size:.88rem;color:#5b6770">Votre demande sera transmise par e-mail à la Commune d’Abengourou.</p></form></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">Services</div><h2>Contacts utiles à structurer.</h2></div></div><div class="grid grid-3">
+<div class="card"><div class="card-body"><h3>État civil</h3><p>Actes de naissance, mariage, décès et informations d’identité.</p></div></div>
+<div class="card"><div class="card-body"><h3>Urbanisme & cadastre</h3><p>Foncier, autorisations et informations relatives à l’urbanisme.</p></div></div>
+<div class="card"><div class="card-body"><h3>Services techniques</h3><p>Voirie, éclairage et suivi des équipements communaux.</p></div></div>
+</div></div></section>
+
+<div class="lightbox"><button class="close-lightbox" aria-label="Fermer">×</button><img src="" alt="Aperçu"></div>
+<footer><div class="container">
+<div class="footer-grid">
+<div><div class="footer-title">COMMUNE D’ABENGOUROU</div><p>Un portail institutionnel dédié à l’information, aux services, aux projets et à l’attractivité de la cité royale.</p><p style="margin-top:12px;color:#ffd28e;font-weight:900">« ABENGOUROU, VILLE D’OPPORTUNITÉS »</p></div>
+<div><div class="footer-title">Navigation</div><div class="footer-links"><a href="la-ville.html">La ville</a><a href="actions.html">Nos actions</a><a href="projets.html">Nos projets</a><a href="actualites.html">Actualités</a></div></div>
+<div><div class="footer-title">Attractivité</div><div class="footer-links"><a href="investir.html">Investir</a><a href="culture-tourisme.html">Culture & tourisme</a><a href="partenariat.html">Partenariat</a></div></div>
+<div><div class="footer-title">Contact</div><div class="footer-links"><span>Hôtel de Ville, Abengourou, Côte d’Ivoire</span><span>+225 07 05 70 90 99</span><span>abengouroumairie@gmail.com</span></div></div>
+</div>
+<div class="copyright"><span>© <span data-year></span> Commune d’Abengourou. Tous droits réservés.</span><span>Portail institutionnel.</span></div>
+</div></footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const menu=document.querySelector('.menu'), links=document.querySelector('.navlinks');
+  if(menu) menu.addEventListener('click',()=>links.classList.toggle('open'));
+  document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>links?.classList.remove('open')));
+  document.querySelectorAll('.reveal').forEach(el=>{
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.08});
+    io.observe(el);
+  });
+  document.querySelectorAll('[data-counter]').forEach(el=>{
+    const target=Number(el.dataset.counter||0);
+    const io=new IntersectionObserver(es=>es.forEach(e=>{
+      if(!e.isIntersecting)return;
+      let start=0, duration=1100, t0=performance.now();
+      function tick(t){let p=Math.min((t-t0)/duration,1), val=Math.floor((1-Math.pow(1-p,3))*target);el.textContent=target===0?'—':val.toLocaleString('fr-FR');if(p<1)requestAnimationFrame(tick)}
+      requestAnimationFrame(tick);io.unobserve(el);
+    }),{threshold:.5});io.observe(el);
+  });
+  document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    const f=btn.dataset.filter;
+    document.querySelectorAll('[data-status]').forEach(card=>card.style.display=(f==='tous'||card.dataset.status===f)?'':'none');
+  }));
+  const lb=document.querySelector('.lightbox');
+  document.querySelectorAll('[data-lightbox]').forEach(img=>img.addEventListener('click',()=>{if(lb){lb.querySelector('img').src=img.src;lb.classList.add('open')}}));
+  lb?.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('close-lightbox'))lb.classList.remove('open')});
+  document.querySelectorAll('form[data-demo]').forEach(form=>form.addEventListener('submit',e=>{
+    e.preventDefault();const out=form.querySelector('.form-status');if(out){out.textContent='Merci. Ce formulaire est prêt à être relié à l’API ou à l’e-mail officiel de la mairie.';out.style.color='#0d6b45'}form.reset();
+  }));
+  const year=document.querySelector('[data-year]');if(year)year.textContent=new Date().getFullYear();
+  const guide=document.querySelector('#downloadGuide');guide?.addEventListener('click',()=>alert('Ajoutez le fichier PDF officiel « Guide de l’investisseur » dans le dossier du site puis reliez ce bouton à ce fichier.'));
+});
+</script>
+</body></html>
