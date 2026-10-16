@@ -71,7 +71,7 @@ h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;color:var(--navy);margin-to
 .list{display:grid;gap:12px}.list li{list-style:none;padding:12px 0;border-bottom:1px solid var(--border)}
 .list li:last-child{border:0}
 .form{background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
-.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;color:var(--navy);font-size:.88rem}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:11px;font:inherit;outline:none;background:#fff}.field textarea{min-height:260px;resize:vertical}.field textarea.news-title{min-height:110px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(13,107,69,.1)}.form-status:empty{display:none}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;color:var(--navy);font-size:.88rem}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:11px;font:inherit;outline:none;background:#fff}.field textarea{min-height:340px;resize:vertical}.field textarea.news-title{min-height:150px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(13,107,69,.1)}.form-status:empty{display:none}
 .news-audio{display:grid;gap:10px;margin-top:16px}.news-audio audio{width:100%}.audio-download{display:inline-flex;align-self:start;align-items:center;gap:8px;padding:9px 13px;border-radius:10px;background:#eaf5ef;color:var(--green);font-weight:800}
 .timeline{border-left:3px solid #d7e8df;margin-left:12px;padding-left:25px}.timeline article{position:relative;margin-bottom:26px}.timeline article:before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px #fff}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery figure{aspect-ratio:1.25;overflow:hidden;border-radius:16px;cursor:pointer;position:relative}.gallery img{width:100%;height:100%;object-fit:cover;transition:.4s}.gallery figure:hover img{transform:scale(1.06)}
@@ -109,8 +109,8 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 <div class="form-grid">
 <div class="field full"><label for="newsImage">Image de l’actualité</label><input id="newsImage" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required></div>
 <div class="field full"><label for="newsAudio">Fichier audio MP3 (facultatif)</label><input id="newsAudio" name="audio" type="file" accept=".mp3,audio/mpeg"></div>
-<div class="field full"><label for="newsTitle">Titre</label><textarea class="news-title" id="newsTitle" name="title" rows="3" required></textarea></div>
-<div class="field full"><label for="newsSubtitle">Sous-titre</label><textarea id="newsSubtitle" name="subtitle" rows="8" required></textarea></div>
+<div class="field full"><label for="newsTitle">Titre</label><textarea class="news-title" id="newsTitle" name="title" rows="5" maxlength="20000" required></textarea></div>
+<div class="field full"><label for="newsSubtitle">Sous-titre</label><textarea id="newsSubtitle" name="subtitle" rows="12" maxlength="100000" required></textarea></div>
 </div>
 <button class="btn btn-primary" type="submit">Publier l’actualité</button>
 <p class="form-help">Les publications sont visibles par tous les visiteurs après envoi. Le titre et le sous-titre peuvent dépasser 255 mots. Image JPG, PNG, WebP ou GIF jusqu’à 5 Mo ; audio MP3 facultatif jusqu’à 15 Mo, avec lecteur et téléchargement.</p>
@@ -131,6 +131,7 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
+  const NEWS_API_URL='https://commune-abengourou-actualites-api.vitalarmand6.workers.dev/api/actualites';
   const menu=document.querySelector('.menu'), links=document.querySelector('.navlinks');
   if(menu) menu.addEventListener('click',()=>links.classList.toggle('open'));
   document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>links?.classList.remove('open')));
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   let addedNews=[];
   const showNewsStatus=(message,isError=false)=>{if(newsStatus){newsStatus.textContent=message;newsStatus.style.color=isError?'#b42318':'#0d6b45'}};
   const readApiResponse=async response=>{
-    if(!response.headers.get('content-type')?.includes('application/json'))throw new Error('L’API ne répond pas en JSON. Vérifiez le déploiement Cloudflare Pages et ses liaisons D1/R2.');
+    if(!response.headers.get('content-type')?.includes('application/json'))throw new Error('L’API ne répond pas en JSON. Vérifiez le Worker API et ses liaisons D1/R2.');
     const result=await response.json();
     if(!response.ok)throw new Error(result.error||`Erreur serveur (${response.status}).`);
     return result;
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   };
   const loadSharedNews=async()=>{
     try{
-      const response=await fetch('/api/actualites');
+      const response=await fetch(NEWS_API_URL);
       const result=await readApiResponse(response);
       if(!Array.isArray(result.news))throw new Error('La réponse du serveur est invalide.');
       addedNews=result.news;
@@ -186,7 +187,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       renderAddedNewsTicker();
       showNewsStatus('');
     }catch(error){
-      showNewsStatus('Le stockage partagé est indisponible. Vérifiez que le site est déployé sur Cloudflare Pages avec les liaisons D1 et R2 configurées.',true);
+      showNewsStatus('Le stockage partagé est indisponible. Vérifiez que le Worker API et ses liaisons D1/R2 sont configurés.',true);
       console.error('Chargement des actualités partagées impossible :',error);
     }
   };
@@ -200,7 +201,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(audioFile&&!audioFile.name.toLowerCase().endsWith('.mp3')){showNewsStatus('Le fichier audio doit être au format MP3.',true);return}
       if(audioFile&&audioFile.size>15*1024*1024){showNewsStatus('Le fichier MP3 dépasse la limite de 15 Mo.',true);return}
       submitButton.disabled=true;showNewsStatus('Publication en cours…');
-      const response=await fetch('/api/actualites',{method:'POST',body:new FormData(newsForm)});
+      const response=await fetch(NEWS_API_URL,{method:'POST',body:new FormData(newsForm)});
       const result=await readApiResponse(response);
       if(!result.news||typeof result.news.title!=='string'||typeof result.news.imageUrl!=='string')throw new Error('La réponse du serveur est invalide.');
       addedNews=[result.news,...addedNews.filter(item=>item.id!==result.news.id)];
