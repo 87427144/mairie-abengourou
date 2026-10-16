@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developers.cloudflare.com/workers/wrangler/schema.json",
+  "name": "abengourou-mairie",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-16",
+  "d1_databases": [
+    {
+      "binding": "NEWS_DB",
+      "database_name": "abengourou-actualites",
+      "database_id": "4e1ed449-c985-499f-8e9b-16bc594ee595"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "NEWS_IMAGES",
+      "bucket_name": "abengourou-actualites-images"
+    }
+  ]
+}
