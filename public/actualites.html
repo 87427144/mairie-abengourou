@@ -71,7 +71,8 @@ h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;color:var(--navy);margin-to
 .list{display:grid;gap:12px}.list li{list-style:none;padding:12px 0;border-bottom:1px solid var(--border)}
 .list li:last-child{border:0}
 .form{background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
-.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;color:var(--navy);font-size:.88rem}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:11px;font:inherit;outline:none;background:#fff}.field textarea{min-height:150px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(13,107,69,.1)}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;color:var(--navy);font-size:.88rem}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:11px;font:inherit;outline:none;background:#fff}.field textarea{min-height:260px;resize:vertical}.field textarea.news-title{min-height:110px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(13,107,69,.1)}.form-status:empty{display:none}
+.news-audio{display:grid;gap:10px;margin-top:16px}.news-audio audio{width:100%}.audio-download{display:inline-flex;align-self:start;align-items:center;gap:8px;padding:9px 13px;border-radius:10px;background:#eaf5ef;color:var(--green);font-weight:800}
 .timeline{border-left:3px solid #d7e8df;margin-left:12px;padding-left:25px}.timeline article{position:relative;margin-bottom:26px}.timeline article:before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px #fff}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery figure{aspect-ratio:1.25;overflow:hidden;border-radius:16px;cursor:pointer;position:relative}.gallery img{width:100%;height:100%;object-fit:cover;transition:.4s}.gallery figure:hover img{transform:scale(1.06)}
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:100;display:none;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:86vh;border-radius:10px}.close-lightbox{position:absolute;top:20px;right:25px;color:#fff;background:none;border:0;font-size:2.3rem;cursor:pointer}
@@ -96,25 +97,26 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 <section class="page-hero"><div class="container"><div class="eyebrow" style="color:#ffd28e">ACTUALITÉS</div><h1>La vie de la commune en temps réel.</h1><p>Actualités municipales, projets, communiqués, culture, sport et développement local.</p></div></section>
 <section class="section"><div class="container"><div class="filters"><button class="filter active" data-filter="tous">Toutes</button><button class="filter" data-filter="vie">Vie locale</button><button class="filter" data-filter="projets">Projets</button><button class="filter" data-filter="culture">Culture</button><button class="filter" data-filter="education">Éducation</button></div>
 <div class="grid grid-3">
-<article class="card reveal" data-status="vie"><div class="media"><img src="images/MARIEMACHE.jpeg" alt="Maire d’Abengourou"></div><div class="card-body"><span class="badge">VIE LOCALE</span><div class="meta">27 septembre 2026</div><h3>Le Maire échange avec les commerçants sur l’occupation des emprises publiques</h3><p>Une rencontre consacrée à l’organisation de l’espace public et au dialogue avec les acteurs commerciaux.</p></div></article>
-<article class="card reveal" data-status="education"><div class="media"><img src="images/cafop.jpg" alt="École"></div><div class="card-body"><span class="badge">ÉDUCATION</span><div class="meta">3 octobre 2026</div><h3>Le CAFOP salue l’appui de la mairie à la formation des élèves-maîtres</h3><p>Une actualité municipale récente portant sur la formation et l’éducation.</p></div></article>
+<article class="card reveal" data-status="vie"><div class="media"><img src="images/maire_hervé_patrick_adom.jpeg" alt="Maire d’Abengourou"></div><div class="card-body"><span class="badge">VIE LOCALE</span><div class="meta">27 septembre 2026</div><h3>Le Maire échange avec les commerçants sur l’occupation des emprises publiques</h3><p>Une rencontre consacrée à l’organisation de l’espace public et au dialogue avec les acteurs commerciaux.</p></div></article>
+<article class="card reveal" data-status="education"><div class="media"><img src="images/mairie_ecole.jpeg" alt="École"></div><div class="card-body"><span class="badge">ÉDUCATION</span><div class="meta">3 octobre 2026</div><h3>Le CAFOP salue l’appui de la mairie à la formation des élèves-maîtres</h3><p>Une actualité municipale récente portant sur la formation et l’éducation.</p></div></article>
 <article class="card reveal" data-status="projets"><div class="media"><img src="images/projet_construction.jpeg" alt="Projet"></div><div class="card-body"><span class="badge">PROJETS</span><div class="meta">3 octobre 2026</div><h3>4,55 milliards FCFA pour le programme triennal 2027–2029</h3><p>Le Conseil municipal a approuvé un programme prévoyant 50 opérations pour la période 2027–2029.</p></div></article>
 <article class="card reveal" data-status="vie"><div class="media"><img src="images/population_mairie.jpeg" alt="Commerçants et habitants"></div><div class="card-body"><span class="badge">VIE LOCALE</span><div class="meta">29 septembre 2026</div><h3>Échanges avec les acteurs économiques de la zone Est</h3><p>La mairie poursuit les rencontres avec les partenaires et opérateurs du territoire.</p></div></article>
-<article class="card reveal" data-status="projets"><div class="media"><img src="images/MAIRIESENSIMACHE.jpeg" alt="Ville"></div><div class="card-body"><span class="badge">TRAVAUX</span><div class="meta">23 septembre 2026</div><h3>Des mesures annoncées contre l’occupation des espaces publics</h3><p>Les échanges portent sur la salubrité, les lotissements anarchiques, le domaine public et les nuisances.</p></div></article>
-<article class="card reveal" data-status="culture"><div class="media"><img src="images/logomairie.jpg" alt="Culture"></div><div class="card-body"><span class="badge">CULTURE</span><div class="meta">À alimenter</div><h3>Agenda culturel de la cité royale</h3><p>Cette rubrique accueillera les fêtes traditionnelles, événements culturels et rendez-vous patrimoniaux.</p></div></article>
+<article class="card reveal" data-status="projets"><div class="media"><img src="images/abengourou-ville.jpeg" alt="Ville"></div><div class="card-body"><span class="badge">TRAVAUX</span><div class="meta">23 septembre 2026</div><h3>Des mesures annoncées contre l’occupation des espaces publics</h3><p>Les échanges portent sur la salubrité, les lotissements anarchiques, le domaine public et les nuisances.</p></div></article>
+<article class="card reveal" data-status="culture"><div class="media"><img src="images/population_mairie.jpeg" alt="Culture"></div><div class="card-body"><span class="badge">CULTURE</span><div class="meta">À alimenter</div><h3>Agenda culturel de la cité royale</h3><p>Cette rubrique accueillera les fêtes traditionnelles, événements culturels et rendez-vous patrimoniaux.</p></div></article>
 </div></div></section>
-<section class="section alt"><div class="container"><div class="section-head"><div><div class="eyebrow">Participation citoyenne</div><h2>Ajouter une actualité</h2><p class="lead">Partagez une information.</p></div></div>
+<section class="section alt"><div class="container"><div class="section-head"><div><div class="eyebrow">Participation citoyenne</div><h2>Ajouter une actualité</h2><p class="lead">Partagez une information avec une image, un titre et un sous-titre.</p></div></div>
 <form class="form" id="newsForm">
 <div class="form-grid">
-<div class="field full"><label for="newsImage">Image de l’actualité</label><input id="newsImage" name="image" type="file" accept="image/*" required></div>
-<div class="field full"><label for="newsTitle">Titre</label><input id="newsTitle" name="title" type="text" maxlength="120" required></div>
-<div class="field full"><label for="newsSubtitle">Sous-titre</label><textarea id="newsSubtitle" name="subtitle" maxlength="300" required></textarea></div>
+<div class="field full"><label for="newsImage">Image de l’actualité</label><input id="newsImage" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required></div>
+<div class="field full"><label for="newsAudio">Fichier audio MP3 (facultatif)</label><input id="newsAudio" name="audio" type="file" accept=".mp3,audio/mpeg"></div>
+<div class="field full"><label for="newsTitle">Titre</label><textarea class="news-title" id="newsTitle" name="title" rows="3" required></textarea></div>
+<div class="field full"><label for="newsSubtitle">Sous-titre</label><textarea id="newsSubtitle" name="subtitle" rows="8" required></textarea></div>
 </div>
 <button class="btn btn-primary" type="submit">Publier l’actualité</button>
-<p class="form-help">Les actualités publiées sont conservées dans ce navigateur et visibles sur cet appareil. L’image doit peser moins de 1 Mo.</p>
+<p class="form-help">Les publications sont visibles par tous les visiteurs après envoi. Le titre et le sous-titre peuvent dépasser 255 mots. Image JPG, PNG, WebP ou GIF jusqu’à 5 Mo ; audio MP3 facultatif jusqu’à 15 Mo, avec lecteur et téléchargement.</p>
 <p class="form-status" id="newsFormStatus" role="status" aria-live="polite"></p>
 </form></div></section>
-<section class="section alt"><div class="container split reveal"><div><div class="eyebrow">Flux municipal</div><h2>Une information fiable et vérifiable.</h2><p>Chaque publication doit afficher sa date, sa catégorie, sa source, son visuel et, lorsque nécessaire, un lien vers le communiqué ou le document officiel.</p></div><img src="images/information.png" alt="Cérémonie municipale"></div></section>
+<section class="section alt"><div class="container split reveal"><div><div class="eyebrow">Flux municipal</div><h2>Une information fiable et vérifiable.</h2><p>Chaque publication doit afficher sa date, sa catégorie, sa source, son visuel et, lorsque nécessaire, un lien vers le communiqué ou le document officiel.</p></div><img src="images/maire_hervé_patrick_adom.jpeg" alt="Cérémonie municipale"></div></section>
 
 <div class="lightbox"><button class="close-lightbox" aria-label="Fermer">×</button><img src="" alt="Aperçu"></div>
 <footer><div class="container">
@@ -122,9 +124,9 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 <div><div class="footer-title">COMMUNE D’ABENGOUROU</div><p>Un portail institutionnel dédié à l’information, aux services, aux projets et à l’attractivité de la cité royale.</p><p style="margin-top:12px;color:#ffd28e;font-weight:900">« ABENGOUROU, VILLE D’OPPORTUNITÉS »</p></div>
 <div><div class="footer-title">Navigation</div><div class="footer-links"><a href="la-ville.html">La ville</a><a href="actions.html">Nos actions</a><a href="projets.html">Nos projets</a><a href="actualites.html">Actualités</a></div></div>
 <div><div class="footer-title">Attractivité</div><div class="footer-links"><a href="investir.html">Investir</a><a href="culture-tourisme.html">Culture & tourisme</a><a href="partenariat.html">Partenariat</a></div></div>
-<div><div class="footer-title">Contact</div><div class="footer-links"><span>Hôtel de Ville, Abengourou, Côte d’Ivoire</span><span>+225 07 05 70 90 99</span><span>abengouroumairie@gmail.com</span></div></div>
+<div><div class="footer-title">Contact</div><div class="footer-links"><span>Hôtel de Ville, Abengourou, Côte d’Ivoire</span><span>+225 27 35 91 38 05</span><span>contact@abengourou.ci</span></div></div>
 </div>
-<div class="copyright"><span>© <span data-year></span> Commune d’Abengourou. Tous droits réservés.</span><span>Portail institutionnel .</span></div>
+<div class="copyright"><span>© <span data-year></span> Commune d’Abengourou. Tous droits réservés.</span><span>Portail institutionnel — contenu à valider par la mairie avant publication.</span></div>
 </div></footer>
 
 <script>
@@ -132,28 +134,32 @@ document.addEventListener('DOMContentLoaded',()=>{
   const menu=document.querySelector('.menu'), links=document.querySelector('.navlinks');
   if(menu) menu.addEventListener('click',()=>links.classList.toggle('open'));
   document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>links?.classList.remove('open')));
-  const newsKey='abengourou-added-news-v1', newsGrid=document.querySelector('.grid.grid-3');
+  const newsGrid=document.querySelector('.grid.grid-3');
   const newsForm=document.querySelector('#newsForm'), newsStatus=document.querySelector('#newsFormStatus');
   let addedNews=[];
   const showNewsStatus=(message,isError=false)=>{if(newsStatus){newsStatus.textContent=message;newsStatus.style.color=isError?'#b42318':'#0d6b45'}};
-  try{
-    const savedNews=localStorage.getItem(newsKey);
-    if(savedNews){
-      const parsedNews=JSON.parse(savedNews);
-      if(!Array.isArray(parsedNews)||parsedNews.some(item=>!item||typeof item.title!=='string'||typeof item.subtitle!=='string'||typeof item.image!=='string'||typeof item.date!=='string'))throw new Error('Le stockage des actualités est invalide.');
-      addedNews=parsedNews;
-    }
-  }catch(error){showNewsStatus('Impossible de charger les actualités enregistrées dans ce navigateur. Vérifiez son stockage local puis rechargez la page.',true);console.error(error)}
+  const readApiResponse=async response=>{
+    if(!response.headers.get('content-type')?.includes('application/json'))throw new Error('L’API ne répond pas en JSON. Vérifiez le déploiement Cloudflare Pages et ses liaisons D1/R2.');
+    const result=await response.json();
+    if(!response.ok)throw new Error(result.error||`Erreur serveur (${response.status}).`);
+    return result;
+  };
   const createNewsCard=item=>{
     const card=document.createElement('article');card.className='card';card.dataset.status='vie';
     const media=document.createElement('div');media.className='media';
-    const image=document.createElement('img');image.src=item.image;image.alt=item.title;media.append(image);
+    const image=document.createElement('img');image.src=item.imageUrl;image.alt=item.title;media.append(image);
     const body=document.createElement('div');body.className='card-body';
     const badge=document.createElement('span');badge.className='badge';badge.textContent='ACTUALITÉ';
-    const date=document.createElement('div');date.className='meta';date.textContent=item.date;
+    const date=document.createElement('div');date.className='meta';date.textContent=new Date(item.createdAt).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
     const title=document.createElement('h3');title.textContent=item.title;
     const subtitle=document.createElement('p');subtitle.textContent=item.subtitle;
     body.append(badge,date,title,subtitle);card.append(media,body);
+    if(item.audioUrl){
+      const audioArea=document.createElement('div');audioArea.className='news-audio';
+      const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src=`${item.audioUrl}?inline=1`;audio.setAttribute('aria-label',`Écouter l’actualité : ${item.title}`);
+      const download=document.createElement('a');download.className='audio-download';download.href=item.audioUrl;download.download='actualite.mp3';download.textContent='Télécharger le MP3';
+      audioArea.append(audio,download);body.append(audioArea);
+    }
     const activeFilter=document.querySelector('.filter.active')?.dataset.filter;
     if(activeFilter&&activeFilter!=='tous'&&activeFilter!=='vie')card.style.display='none';
     newsGrid?.prepend(card);
@@ -170,28 +176,39 @@ document.addEventListener('DOMContentLoaded',()=>{
     const duplicate=group.cloneNode(true);duplicate.setAttribute('aria-hidden','true');
     track.replaceChildren(group,duplicate);ticker.hidden=false;
   };
-  addedNews.slice().reverse().forEach(createNewsCard);
-  renderAddedNewsTicker();
+  const loadSharedNews=async()=>{
+    try{
+      const response=await fetch('/api/actualites');
+      const result=await readApiResponse(response);
+      if(!Array.isArray(result.news))throw new Error('La réponse du serveur est invalide.');
+      addedNews=result.news;
+      addedNews.slice().reverse().forEach(createNewsCard);
+      renderAddedNewsTicker();
+      showNewsStatus('');
+    }catch(error){
+      showNewsStatus('Le stockage partagé est indisponible. Vérifiez que le site est déployé sur Cloudflare Pages avec les liaisons D1 et R2 configurées.',true);
+      console.error('Chargement des actualités partagées impossible :',error);
+    }
+  };
+  showNewsStatus('Chargement des actualités partagées…');
+  loadSharedNews();
   newsForm?.addEventListener('submit',async event=>{
     event.preventDefault();
-    const imageFile=newsForm.elements.image.files[0];
-    if(!imageFile){showNewsStatus('Choisissez une image avant de publier.',true);return}
-    if(!imageFile.type.startsWith('image/')){showNewsStatus('Le fichier choisi doit être une image.',true);return}
-    if(imageFile.size>1024*1024){showNewsStatus('L’image dépasse la limite de 1 Mo. Choisissez un fichier plus léger.',true);return}
+    const submitButton=newsForm.querySelector('[type="submit"]');
     try{
-      const image=await new Promise((resolve,reject)=>{
-        const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('La lecture de l’image a échoué.'));reader.readAsDataURL(imageFile);
-      });
-      const title=newsForm.elements.title.value.trim(),subtitle=newsForm.elements.subtitle.value.trim();
-      if(!title||!subtitle){showNewsStatus('Le titre et le sous-titre sont obligatoires.',true);return}
-      const item={image,title,subtitle,date:new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})};
-      const nextNews=[item,...addedNews];
-      localStorage.setItem(newsKey,JSON.stringify(nextNews));
-      addedNews=nextNews;
-      createNewsCard(item);
+      const audioFile=newsForm.elements.audio.files[0];
+      if(audioFile&&!audioFile.name.toLowerCase().endsWith('.mp3')){showNewsStatus('Le fichier audio doit être au format MP3.',true);return}
+      if(audioFile&&audioFile.size>15*1024*1024){showNewsStatus('Le fichier MP3 dépasse la limite de 15 Mo.',true);return}
+      submitButton.disabled=true;showNewsStatus('Publication en cours…');
+      const response=await fetch('/api/actualites',{method:'POST',body:new FormData(newsForm)});
+      const result=await readApiResponse(response);
+      if(!result.news||typeof result.news.title!=='string'||typeof result.news.imageUrl!=='string')throw new Error('La réponse du serveur est invalide.');
+      addedNews=[result.news,...addedNews.filter(item=>item.id!==result.news.id)];
+      createNewsCard(result.news);
       renderAddedNewsTicker();
-      newsForm.reset();showNewsStatus('Actualité publiée et enregistrée dans ce navigateur.');
-    }catch(error){showNewsStatus('Impossible d’enregistrer cette actualité. Le stockage du navigateur est peut-être plein ou indisponible.',true);console.error(error)}
+      newsForm.reset();showNewsStatus('Actualité publiée et visible par tous les visiteurs.');
+    }catch(error){showNewsStatus(error.message||'Impossible de publier cette actualité. Vérifiez votre connexion puis réessayez.',true);console.error('Publication de l’actualité impossible :',error)}
+    finally{if(submitButton)submitButton.disabled=false}
   });
   document.querySelectorAll('.reveal').forEach(el=>{
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.08});
